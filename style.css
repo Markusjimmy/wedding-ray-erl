@@ -452,12 +452,6 @@ footer li {
 }
 
 
-@media (min-width: 992px) {
-  .sticky-top {
-    overflow: hidden;
-  }
-}
-
 
 /* mobile phone */
 @media (max-width: 576px) {
@@ -486,6 +480,10 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
+}
+
+.sticky-top {
+  overflow: hidden;
 }
 
 .couple-name {
