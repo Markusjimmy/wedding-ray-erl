@@ -75,16 +75,6 @@ body {
   text-transform: uppercase;
 }
 
-/* FIX OFFCANVAS MOBILE */
-.mynavbar .offcanvas {
-  background-color: #ffffff !important;
-  backdrop-filter: none !important;
-}
-
-.mynavbar .offcanvas .nav-link {
-  color: #000000 !important;
-}
-
 .home {
   background-image: url(Foto/Bg.png);
   background-size: cover;
@@ -468,11 +458,11 @@ footer li {
 /* mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 65%;
+    font-size: 60%;
   }
 
   .simply-countdown > .simply-section {
-    padding: 30px;
+    padding: 45px;
     margin: 3px;
   }
   .timeline li .timeline-image {
@@ -493,7 +483,6 @@ footer li {
     top: 31px;
   }
 }
-
 
 .couple-name {
   display: flex;
@@ -558,4 +547,3 @@ footer li {
     margin: 5px 0;
   }
 }
-
