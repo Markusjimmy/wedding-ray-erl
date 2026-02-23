@@ -469,14 +469,18 @@ const audioIcon = document.querySelector('.audio-icon-wrapper i')
          const song = document.querySelector('#song');
 let isPlaying = false;
 
-function disableScroll() {
-  document.body.style.overflow = "hidden";
-}
+let scrollTop = 0;
+let scrollLeft = 0;
 
-function enableScroll() {
-  document.body.style.overflow = "auto";
-  rootElement.style.scrollBehavior = "smooth";
-  playAudio();
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+
+  rootElement.style.scrollBehavior = 'auto';
 }
 
         function enableScroll() {
