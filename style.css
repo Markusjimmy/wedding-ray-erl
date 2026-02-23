@@ -14,10 +14,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Foto/Baru.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("Foto/Baru.jpeg") no-repeat center center;
+  background-size: contain; /* atau gunakan cover */
   z-index: -1;
 }
 
@@ -506,6 +505,15 @@ footer li {
   .timeline li .timeline-panel {
     width: 90%;
     transform: none;
+  }
+}
+
+    background-size: cover; /* bikin penuh layar HP */
+    background-position: center top; /* biar fokus di atas */
+  }
+
+  .hero {
+    min-height: 100vh; /* pastikan tinggi layar full HP */
   }
 }
 
