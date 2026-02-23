@@ -267,32 +267,32 @@
 
             <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
               <div class="col mt-3">
-                <a href="Foto/gallery/Walpaper.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Walpaper.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Walpaper.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed2.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed2.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed2.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed3.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed3.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed3.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed4.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed4.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed4.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed5.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed5.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed5.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed6.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed6.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed6.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
@@ -448,16 +448,18 @@ Terima kasih atas doa dan cinta yang diberikan kepada kami.</p>
     </script>
 
     <script>
-      const stickyTop = document.querySelector(".sticky-top");
-      const offcanvas = document.querySelector(".offcanvas");
+const stickyTop = document.querySelector(".sticky-top");
+const offcanvas = document.querySelector(".offcanvas");
 
-      offcanvas.addEventListener("show.bs.offcanvas", function () {
-        stickyTop.style.overflow = "visible";
-      });
+if (offcanvas && stickyTop) {
+  offcanvas.addEventListener("show.bs.offcanvas", function () {
+    stickyTop.style.overflow = "visible";
+  });
 
-      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        stickyTop.style.overflow = "hidden";
-      });
+  offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+    stickyTop.style.overflow = "hidden";
+  });
+}
     </script>
 
     <script>
@@ -487,13 +489,12 @@ function disableScroll() {
                     // localStorage.setItem('opened', 'true');
                     playAudio();
         }
-
-        function playAudio() {
-          song.volume = 0.2;
-          audioIconWrapper.style.display = 'flex';
-          song.play();
-isPlaying = true;
-        }
+function playAudio() {
+  song.volume = 0.2;
+  audioIconWrapper.style.display = 'flex';
+  song.play().catch(() => {});
+  isPlaying = true;
+}
 audioIconWrapper.onclick = function() {
 if(isPlaying) {
 song.pause();
@@ -511,7 +512,9 @@ isPlaying = !isPlaying;
        // if(!localStorage.getItem('opened')){
        // disableScroll();
        // }
-       disableScroll();
+window.addEventListener("load", function () {
+  disableScroll();
+});
     </script>
     <script>
       window.addEventListener("load", function() {
