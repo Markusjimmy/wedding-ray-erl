@@ -119,7 +119,7 @@
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d255116.6517379651!2d99.5445231!3d2.4411047!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302d85f86f649c69%3A0x3729c3c9f1b6c8db!2sHKBP%20Aek%20Pamienke!5e0!3m2!1sen!2sid!4v1771771810006!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <a href="https://maps.app.goo.gl/ucqbC1L7sT6zbMRn7" target="_blank" class="btn btn-light btn-sm my-">Klik untuk membuka peta</a>
+            <a href="https://maps.app.goo.gl/ucqbC1L7sT6zbMRn7" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
             <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba ditujuan di tujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi anda salah jadwal, atau salah tempat.</p>
           </div>
         </div>
@@ -229,7 +229,6 @@
                   </div>
                 </div>
               </li>
-              <li></li>
             </ul>
           </div>
         </div>
@@ -248,32 +247,32 @@
 
             <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
               <div class="col mt-3">
-                <a href="Foto/gallery/Walpaper.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Walpaper.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Walpaper.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed2.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed2.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed2.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed3.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed3.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed3.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed4.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed4.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed4.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed5.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed5.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed5.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
                           <div class="col mt-3">
-                <a href="Foto/gallery/Wed6.jpeg" data-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
+                <a href="Foto/gallery/Wed6.jpeg" data-bs-toggle="lightbox" data-caption="This describes the image" data-gallery="mygallery">
                 <img src="Foto/gallery/thumbnail/Wed6.jpeg" alt="Gambar Timpa" class="img-fluid w-100 rounded" />
               </a>
             </div>
@@ -312,7 +311,7 @@
   <label for="status" class="form-label">Konfirmasi</label>
 <select name="status" id="status" class="form-select">
     <option selected>Pilih salah satu</option>
-    <option value="Hadir">Hadir</option>>
+    <option value="Hadir">Hadir</option>
 <option value="Tidak hadir">Tidak Hadir</option>
 </select>
   </div>
@@ -376,7 +375,6 @@ Terima kasih atas doa dan cinta yang diberikan kepada kami.</p>
 </ul>
   </div>
             </div>
-          </div>
 
 </section>
 
@@ -400,7 +398,7 @@ Terima kasih atas doa dan cinta yang diberikan kepada kami.</p>
 
 
 <div id="audio-container">
-  <audio id="song" autoplay loop>
+<audio id="song" autoplay loop muted>
     <source src="audio/Nyoman_Paul_-_The_Way_You_Look_At_Me_Lirik_Lagu_256KBPS.webm" type="audio/webm">
   </audio>
 
@@ -470,7 +468,8 @@ function disableScroll() {
         }
 
         function playAudio() {
-          song.volume = 0.2;
+          song.muted = false;
+          song.volume = 0.5;
           audioIconWrapper.style.display = 'flex';
           song.play();
 isPlaying = true;
@@ -520,7 +519,7 @@ isPlaying = !isPlaying;
 const namaContainer = document.querySelector('.hero h4 span');
 namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
-document.querySelector('#nama'). value = nama;
+document.querySelector('#nama').value = nama;
     </script>
   </body>
 </html>
