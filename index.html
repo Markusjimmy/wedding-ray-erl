@@ -28,7 +28,7 @@
   </head>
 
   <body>
-<section id="hero" class="hero w-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+    <section id="hero" class="hero w-100 vh-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
         <h4>kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
         <h1 class="couple-name">
@@ -53,28 +53,16 @@
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ray & Erl</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-<div class="offcanvas-body">
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="#home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#info">Info</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#story">Story</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#gallery">Gallery</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#rsvp">RSVP</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#gifts">Gifts</a>
-    </li>
-  </ul>
-</div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#story">Story</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gifts">Gifts</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -240,7 +228,7 @@
                 <div class="timeline-image" style="background-image: url(Foto/we3.jpeg)"></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h3>Pemberkatan Nikah</h3>
+                    <h3>Akad Nikah</h3>
                     <span>Tanya dulu tanggal awal ketemu</span>
                   </div>
                   <div class="timeline-body">
@@ -331,7 +319,7 @@
   <label for="status" class="form-label">Konfirmasi</label>
 <select name="status" id="status" class="form-select">
     <option selected>Pilih salah satu</option>
-    <option value="Hadir">Hadir</option>
+    <option value="Hadir">Hadir</option>>
 <option value="Tidak hadir">Tidak Hadir</option>
 </select>
   </div>
@@ -430,6 +418,8 @@ Terima kasih atas doa dan cinta yang diberikan kepada kami.</p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+
     <script>
       simplyCountdown(".simply-countdown", {
         year: 2026,
@@ -446,18 +436,16 @@ Terima kasih atas doa dan cinta yang diberikan kepada kami.</p>
     </script>
 
     <script>
-const stickyTop = document.querySelector(".sticky-top");
-const offcanvas = document.querySelector(".offcanvas");
+      const stickyTop = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
 
-if (offcanvas && stickyTop) {
-  offcanvas.addEventListener("show.bs.offcanvas", function () {
-    stickyTop.style.overflow = "visible";
-  });
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
 
-  offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-    stickyTop.style.overflow = "hidden";
-  });
-}
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
+      });
     </script>
 
     <script>
@@ -487,12 +475,13 @@ function disableScroll() {
                     // localStorage.setItem('opened', 'true');
                     playAudio();
         }
-function playAudio() {
-  song.volume = 0.2;
-  audioIconWrapper.style.display = 'flex';
-  song.play().catch(() => {});
-  isPlaying = true;
-}
+
+        function playAudio() {
+          song.volume = 0.2;
+          audioIconWrapper.style.display = 'flex';
+          song.play();
+isPlaying = true;
+        }
 audioIconWrapper.onclick = function() {
 if(isPlaying) {
 song.pause();
@@ -510,9 +499,7 @@ isPlaying = !isPlaying;
        // if(!localStorage.getItem('opened')){
        // disableScroll();
        // }
-window.addEventListener("load", function () {
-  disableScroll();
-});
+       disableScroll();
     </script>
     <script>
       window.addEventListener("load", function() {
@@ -542,6 +529,5 @@ namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
 document.querySelector('#nama'). value = nama;
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
