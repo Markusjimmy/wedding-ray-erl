@@ -75,6 +75,16 @@ body {
   text-transform: uppercase;
 }
 
+/* FIX OFFCANVAS MOBILE */
+.mynavbar .offcanvas {
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+.mynavbar .offcanvas .nav-link {
+  color: #000000 !important;
+}
+
 .home {
   background-image: url(Foto/Bg.png);
   background-size: cover;
@@ -481,22 +491,6 @@ footer li {
 
   .timeline li .timeline-panel::after {
     top: 31px;
-  }
-}
-
-/* 🔥 TAMBAHKAN INI DI BAWAHNYA */
-  .mynavbar .offcanvas {
-    background-color: white !important;
-  }
-
-  .mynavbar .nav-link {
-    color: black !important;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .mynavbar .navbar-brand {
-    color: black !important;
   }
 }
 
