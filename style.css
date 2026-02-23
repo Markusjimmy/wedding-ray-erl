@@ -14,12 +14,13 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Foto/Baru.jpeg");
-  background-size: cover; /* tetap full */
-  background-position: center center; /* fokus ke tengah foto */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Foto/Baru.jpeg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
 }
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -457,21 +458,21 @@ footer li {
 /* mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 65%;
+    font-size: 60%;
   }
 
   .simply-countdown > .simply-section {
-    padding: 20px;
+    padding: 45px;
     margin: 3px;
   }
   .timeline li .timeline-image {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .timeline li .timeline-panel {
-    width: 90%;
-    transform: translateX(0);
+    width: 65%;
+    transform: translateX(-20px);
   }
 
   .timeline li .timeline-panel::before {
