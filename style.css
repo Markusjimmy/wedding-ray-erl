@@ -14,9 +14,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Foto/Baru.jpeg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Foto/Baru.jpeg");
+  background-size: contain; /* ganti dari cover */
+  background-position: center top; /* bisa juga center center */
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -458,7 +458,7 @@ footer li {
 /* mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 50%;
+    font-size: 65%;
   }
 
   .simply-countdown > .simply-section {
@@ -471,8 +471,8 @@ footer li {
   }
 
   .timeline li .timeline-panel {
-    width: 65%;
-    transform: translateX(-20px);
+    width: 90%;
+    transform: translateX(0);
   }
 
   .timeline li .timeline-panel::before {
