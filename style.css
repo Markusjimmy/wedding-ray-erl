@@ -507,6 +507,18 @@ footer li {
   }
 }
 
+/* ============================= */
+/* FIX OFFCANVAS MOBILE */
+/* ============================= */
+
+.offcanvas {
+  z-index: 1055 !important;
+}
+
+.navbar {
+  z-index: 1056 !important;
+}
+
 .couple img {
   width: 100%;
   max-width: 200px;
@@ -553,10 +565,3 @@ footer li {
   }
 }
 
-.offcanvas {
-  z-index: 1055 !important;
-}
-
-.navbar {
-  z-index: 1056 !important;
-}
