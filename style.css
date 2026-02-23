@@ -484,6 +484,31 @@ footer li {
   }
 }
 
+@media (max-width: 576px) {
+  .sticky-top {
+    overflow: visible;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero::before {
+    background-size: cover;
+  }
+
+  .rsvp h2 {
+    font-size: 2.5rem;
+  }
+
+  .timeline li .timeline-panel {
+    width: 90%;
+    transform: none;
+  }
+}
+
 .couple-name {
   display: flex;
   flex-direction: column;
