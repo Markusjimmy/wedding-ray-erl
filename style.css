@@ -451,6 +451,34 @@ footer li {
   }
 }
 
+/* FIX MOBILE */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero h4 {
+    font-size: 16px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .couple-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .and {
+    display: none;
+  }
+
+}
+
 
 .sticky-top {
   overflow: hidden;
