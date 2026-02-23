@@ -451,9 +451,6 @@ footer li {
   }
 }
 
-.sticky-top {
-  overflow: hidden;
-}
 
 /* mobile phone */
 @media (max-width: 576px) {
