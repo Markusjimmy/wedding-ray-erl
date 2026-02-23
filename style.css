@@ -552,3 +552,11 @@ footer li {
     max-width: 120px;
   }
 }
+
+.offcanvas {
+  z-index: 1055 !important;
+}
+
+.navbar {
+  z-index: 1056 !important;
+}
