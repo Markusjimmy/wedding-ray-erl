@@ -18,44 +18,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
     <link rel="stylesheet" href="style.css" />
-
-<!-- 🔥 OPEN GRAPH DI DALAM HEAD -->
-<meta property="og:title" content="The Wedding of Raymundus & Erlita" />
-<meta property="og:description" content="Dengan penuh sukacita kami mengundang Anda untuk hadir dalam pernikahan kami." />
-<meta property="og:image" content="https://markusjimmy.github.io/wedding-ray-erl/preview.jpg" />
-<meta property="og:url" content="https://markusjimmy.github.io/wedding-ray-erl/" />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="id_ID" />
-<meta property="og:site_name" content="Ray & Erl Wedding Invitation" />
-<meta name="twitter:card" content="summary_large_image" />
-
-    
   </head>
 
-
   <body>
-<section id="hero" class="hero w-100 vh-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
-  <img src="Foto/Baru.jpeg" class="hero-img" alt="">
-  <div class="overlay"></div>
-  <main>
-    <h4>kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
-    <h1 class="couple-name">
-      <span class="name-pria">Raymundus R. P. N Mendrofa</span>
-      <span class="and">&</span>
-      <span class="name-wanita">Erlita Sariani Siburian</span>
-    </h1>
-    <p>Akan melangsungkan resepsi pernikahan dalam:</p>
-    <div class="simply-countdown"></div>
-    <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
-  </main>
-</section>
+    <section id="hero" class="hero w-100 vh-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+      <main>
+        <h4>kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+        <h1 class="couple-name">
+          <span class="name-pria">Raymundus R. P. N Mendrofa</span>
+          <span class="and">&</span>
+          <span class="name-wanita">Erlita Sariani Siburian</span>
+        </h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="simply-countdown"></div>
+        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
+      </main>
+    </section>
 
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">Ray & Erl</a>
-<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-</button>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ray & Erl</h5>
@@ -327,7 +312,7 @@
   <label for="status" class="form-label">Konfirmasi</label>
 <select name="status" id="status" class="form-select">
     <option selected>Pilih salah satu</option>
-    <option value="Hadir">Hadir</option>
+    <option value="Hadir">Hadir</option>>
 <option value="Tidak hadir">Tidak Hadir</option>
 </select>
   </div>
@@ -485,7 +470,7 @@ function disableScroll() {
         }
 
         function playAudio() {
-          song.volume = 0.5;
+          song.volume = 0.2;
           audioIconWrapper.style.display = 'flex';
           song.play();
 isPlaying = true;
