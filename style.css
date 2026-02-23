@@ -370,7 +370,7 @@ footer li {
 }
 
 @keyframes rotating {
-  form {
+  from {
     transform: rotate(0);
   }
   to {
@@ -475,13 +475,15 @@ footer li {
     transform: translateX(-20px);
   }
 
-  .timeline li .timeline-panel::before {
-    top: 30px;
-  }
+.timeline li .timeline-panel::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  .timeline li .timeline-panel::after {
-    top: 31px;
-  }
+.timeline li .timeline-panel::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
 }
 
 .couple-name {
@@ -545,5 +547,11 @@ footer li {
 
   .and {
     margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .couple img {
+    max-width: 120px;
   }
 }
