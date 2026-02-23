@@ -484,6 +484,22 @@ footer li {
   }
 }
 
+/* 🔥 TAMBAHKAN INI DI BAWAHNYA */
+  .mynavbar .offcanvas {
+    background-color: white !important;
+  }
+
+  .mynavbar .nav-link {
+    color: black !important;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .mynavbar .navbar-brand {
+    color: black !important;
+  }
+}
+
 
 .couple-name {
   display: flex;
