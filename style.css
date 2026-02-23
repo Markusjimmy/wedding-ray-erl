@@ -15,8 +15,8 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Foto/Baru.jpeg");
-  background-size: contain; /* ganti dari cover */
-  background-position: center top; /* bisa juga center center */
+  background-size: cover; /* tetap penuh */
+  background-position: center center; /* fokus ke tengah foto */
   background-repeat: no-repeat;
   z-index: -1;
 }
