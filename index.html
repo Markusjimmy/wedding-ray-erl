@@ -459,14 +459,14 @@ let scrollTop = 0;
 let scrollLeft = 0;
 
 function disableScroll() {
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-  window.onscroll = function () {
-    window.scrollTo(scrollLeft, scrollTop);
-  };
-
+  document.body.style.overflow = 'hidden';
   rootElement.style.scrollBehavior = 'auto';
+}
+
+function enableScroll() {
+  document.body.style.overflow = 'auto';
+  rootElement.style.scrollBehavior = 'smooth';
+  playAudio();
 }
 
         function enableScroll() {
