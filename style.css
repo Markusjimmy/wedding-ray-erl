@@ -16,8 +16,16 @@ body {
   inset: 0;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url("Foto/Baru.jpeg") no-repeat center center;
-  background-size: contain; /* atau gunakan cover */
+  background-size: cover; /* gambar full layar tapi proporsional */
   z-index: -1;
+}
+
+/* Media query untuk HP */
+@media (max-width: 576px) {
+  .hero::before {
+    background-position: center top; /* fokus ke atas supaya tidak kepotong wajah */
+    background-size: cover;
+  }
 }
 
 .hero {
