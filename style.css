@@ -507,6 +507,14 @@ footer li {
   }
 }
 
+.couple img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* ============================= */
 /* FIX OFFCANVAS MOBILE */
 /* ============================= */
@@ -517,14 +525,6 @@ footer li {
 
 .navbar {
   z-index: 1056 !important;
-}
-
-.couple img {
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 /* ========================= */
