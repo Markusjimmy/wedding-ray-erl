@@ -558,3 +558,12 @@ footer li {
     margin: 5px 0;
   }
 }
+.mynavbar {
+  position: relative;
+  z-index: 1050;
+}
+
+.mynavbar .offcanvas {
+  z-index: 1055 !important;
+  background-color: #fff !important;
+}
