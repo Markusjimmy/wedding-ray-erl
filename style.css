@@ -515,18 +515,6 @@ footer li {
   border-radius: 50%;
 }
 
-/* ============================= */
-/* FIX OFFCANVAS MOBILE */
-/* ============================= */
-
-.offcanvas {
-  z-index: 1055 !important;
-}
-
-.navbar {
-  z-index: 1056 !important;
-}
-
 /* ========================= */
 /* FIX NAMA MEMPELAI LAPTOP */
 /* ========================= */
