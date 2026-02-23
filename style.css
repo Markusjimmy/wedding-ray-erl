@@ -357,7 +357,6 @@ footer li {
   position: fixed;
   bottom: 2.5rem;
   right: 2rem;
-  z-index: 9999;
   cursor: pointer;
   color: white;
   opacity: 0.5;
@@ -371,7 +370,7 @@ footer li {
 }
 
 @keyframes rotating {
-  from {
+  form {
     transform: rotate(0);
   }
   to {
@@ -463,7 +462,7 @@ footer li {
   }
 
   .simply-countdown > .simply-section {
-    padding: 15px;
+    padding: 45px;
     margin: 3px;
   }
   .timeline li .timeline-image {
