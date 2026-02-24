@@ -525,13 +525,21 @@ isPlaying = !isPlaying;
     </script>
 
     <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const nama = urlParams.get('n') || '';
-      const pronoun = urlParams.get('p') || '';
-const namaContainer = document.querySelector('.hero h4 span');
-namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get('n') || '';
+const pronoun = urlParams.get('p') || '';
 
-document.querySelector('#nama'). value = nama;
+const namaContainer = document.querySelector('.hero h4 span');
+
+if (pronoun && nama) {
+  namaContainer.innerText = `${pronoun} ${nama},`;
+} else if (nama) {
+  namaContainer.innerText = `${nama},`;
+} else {
+  namaContainer.innerText = '';
+}
+
+document.querySelector('#nama').value = nama;
     </script>
   </body>
 </html>
